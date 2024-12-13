@@ -10,6 +10,8 @@ services:
       - website-network
     environment:
       DHPARAM_GENERATION: "false"
+      VIRTUAL_HOST: websiteapp.ddns.net
+      VIRTUAL_PORT: 80
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./etc/nginx/certs:/etc/nginx/certs
